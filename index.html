@@ -53,7 +53,15 @@
         </div>
       </section>
 
-      <section id="contact" class="content-section contact-section" aria-labelledby="contact-title"><div><p class="section-label">04 / CONTACT</p><h2 id="contact-title">함께 만들어볼까요?</h2></div><a class="contact-link" href="https://github.com/donghwi-1129" target="_blank" rel="noreferrer">github.com/donghwi-1129 <span>↗</span></a></section>
+      <section id="tetris" class="content-section tetris-section" aria-labelledby="tetris-title">
+        <div class="section-heading"><div><p class="section-label">04 / ARCADE</p><h2 id="tetris-title">Tetris Lab</h2></div><span class="section-note">Classic block puzzle</span></div>
+        <div class="game-layout tetris-layout">
+          <div class="game-copy"><p>블록을 회전하고 빈틈없이 쌓아 줄을 완성하세요. 방향키·WASD·스페이스 또는 화면 버튼으로 조작할 수 있습니다.</p><div class="score-board"><span>점수 <strong id="tetris-score">0</strong></span><span>레벨 <strong id="tetris-level">1</strong></span><span>최고 <strong id="tetris-high-score">0</strong></span></div><div class="game-actions"><button class="button" id="start-tetris" type="button">게임 시작</button><button class="button secondary" id="pause-tetris" type="button" disabled>일시정지</button></div></div>
+          <div class="tetris-board-wrap"><canvas id="tetris-canvas" width="240" height="480" aria-label="테트리스 게임 보드"></canvas><p id="tetris-status" class="game-status" role="status">게임 시작을 눌러주세요.</p><div class="tetris-controls" aria-label="테트리스 조작"><button type="button" data-tetris="rotate" aria-label="회전">↻</button><div><button type="button" data-tetris="left" aria-label="왼쪽">←</button><button type="button" data-tetris="down" aria-label="아래">↓</button><button type="button" data-tetris="right" aria-label="오른쪽">→</button></div><button type="button" data-tetris="drop" aria-label="바로 내리기">⤓</button></div></div>
+        </div>
+      </section>
+
+      <section id="contact" class="content-section contact-section" aria-labelledby="contact-title"><div><p class="section-label">05 / CONTACT</p><h2 id="contact-title">함께 만들어볼까요?</h2></div><a class="contact-link" href="https://github.com/donghwi-1129" target="_blank" rel="noreferrer">github.com/donghwi-1129 <span>↗</span></a></section>
     </main>
 
     <footer class="site-footer"><p><strong>DH</strong> · AI Developer Portfolio</p><p>© <span id="year"></span> DH. Built with curiosity.</p></footer>
