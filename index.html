@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Donghwi의 프로페셔널 포트폴리오">
-    <title>Donghwi | Portfolio</title>
+    <meta name="description" content="DH의 AI 프로젝트와 개발 포트폴리오">
+    <title>DH | AI Developer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#home">Donghwi</a>
+      <a class="brand" href="#home" aria-label="DH 홈"><span>DH</span><small>AI DEVELOPER</small></a>
       <nav aria-label="주요 메뉴">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
@@ -20,36 +20,43 @@
 
     <main>
       <section id="home" class="hero" aria-labelledby="home-title">
-        <p class="eyebrow">Professional Portfolio</p>
-        <h1 id="home-title">안녕하세요, Donghwi입니다.</h1>
-        <p class="lead">프로필과 경력 정보는 CV 확인 후 업데이트합니다. <span class="needs-review">[사람 확인 필요]</span></p>
+        <div class="hero-copy">
+          <p class="eyebrow">AI · PRODUCT · ENGINEERING</p>
+          <h1 id="home-title">아이디어를<br><em>지능적인 경험</em>으로.</h1>
+          <p class="lead">안녕하세요, DH입니다. 사람에게 유용한 AI 프로젝트와 정돈된 디지털 경험을 만듭니다.</p>
+          <a class="button" href="#projects">프로젝트 보기 <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-profile">
+          <div class="profile-ring"><img src="assets/dh-profile.png" alt="밝은 개발 환경에서 촬영한 DH의 프로필 사진"></div>
+          <p class="profile-caption"><strong>DH</strong><span>AI PROJECT BUILDER</span></p>
+        </div>
       </section>
 
-      <section id="about" class="content-section" aria-labelledby="about-title">
-        <h2 id="about-title">About</h2>
-        <p>소개 내용은 확인된 자료를 바탕으로 작성할 예정입니다. <span class="needs-review">[CV 제공 및 사람 확인 필요]</span></p>
+      <section id="about" class="content-section about-grid" aria-labelledby="about-title">
+        <div><p class="section-label">01 / ABOUT</p><h2 id="about-title">기술은 명확하게,<br>경험은 자연스럽게.</h2></div>
+        <div><p>DH는 AI를 활용해 복잡한 문제를 이해하기 쉬운 제품과 서비스로 바꾸는 개발자입니다. 검증 가능한 결과와 사용하기 좋은 인터페이스를 함께 고민합니다.</p><div class="stat-row"><div><strong>AI</strong><span>Focus</span></div><div><strong>UX</strong><span>Mindset</span></div><div><strong>∞</strong><span>Curiosity</span></div></div></div>
       </section>
 
       <section id="projects" class="content-section" aria-labelledby="projects-title">
-        <h2 id="projects-title">Projects</h2>
-        <p>프로젝트 내용은 확인된 경력 자료를 바탕으로 추가합니다. <span class="needs-review">[사람 확인 필요]</span></p>
+        <div class="section-heading"><div><p class="section-label">02 / PROJECTS</p><h2 id="projects-title">AI Projects</h2></div><span class="section-note">Selected work</span></div>
+        <div class="project-grid">
+          <article class="project-card featured"><span class="project-number">01</span><div><p class="project-type">AI · PRODUCT</p><h3>AI 프로젝트</h3><p>생성형 AI와 자동화를 활용해 사용자의 업무를 더 빠르고 명확하게 만드는 프로젝트입니다.</p><div class="tags"><span>AI</span><span>Automation</span><span>Product</span></div></div><span class="card-arrow">↗</span></article>
+          <article class="project-card"><span class="project-number">02</span><div><p class="project-type">EXPERIMENT</p><h3>더 많은 프로젝트</h3><p>새로운 아이디어를 실험하고 실제 문제 해결로 연결합니다.</p><div class="tags"><span>Research</span><span>Build</span></div></div><span class="card-arrow">↗</span></article>
+        </div>
       </section>
 
-      <section id="games" class="content-section game-placeholder" aria-labelledby="games-title">
-        <h2 id="games-title">Games</h2>
-        <p>지렁이 게임 영역을 준비했습니다. 게임 규칙과 추가 기능은 확인 후 구현합니다.</p>
-        <p class="needs-review">[게임 추가 기능: 없음 또는 랜덤하게 움직이는 적 — 사람 확인 필요]</p>
+      <section id="games" class="content-section game-section" aria-labelledby="games-title">
+        <div class="section-heading"><div><p class="section-label">03 / PLAYGROUND</p><h2 id="games-title">Snake Lab</h2></div><span class="section-note">Classic + moving enemy</span></div>
+        <div class="game-layout">
+          <div class="game-copy"><p>방향키, WASD 또는 화면 버튼으로 지렁이를 움직이세요. 먹이를 먹으면 성장하고, 빨간 적과 벽에 부딪히면 게임이 끝납니다.</p><div class="score-board"><span>점수 <strong id="score">0</strong></span><span>최고 <strong id="high-score">0</strong></span></div><div class="game-actions"><button class="button" id="start-game" type="button">게임 시작</button><button class="button secondary" id="pause-game" type="button" disabled>일시정지</button></div></div>
+          <div class="game-board-wrap"><canvas id="game-canvas" width="480" height="480" aria-label="지렁이 게임 보드"></canvas><p id="game-status" class="game-status" role="status">게임 시작을 눌러주세요.</p><div class="touch-controls" aria-label="터치 방향 조작"><button type="button" data-direction="up" aria-label="위">↑</button><div><button type="button" data-direction="left" aria-label="왼쪽">←</button><button type="button" data-direction="down" aria-label="아래">↓</button><button type="button" data-direction="right" aria-label="오른쪽">→</button></div></div></div>
+        </div>
       </section>
 
-      <section id="contact" class="content-section" aria-labelledby="contact-title">
-        <h2 id="contact-title">Contact</h2>
-        <p>연락처 공개 범위는 사람 확인 후 입력합니다. <span class="needs-review">[사람 확인 필요]</span></p>
-      </section>
+      <section id="contact" class="content-section contact-section" aria-labelledby="contact-title"><div><p class="section-label">04 / CONTACT</p><h2 id="contact-title">함께 만들어볼까요?</h2></div><a class="contact-link" href="https://github.com/donghwi-1129" target="_blank" rel="noreferrer">github.com/donghwi-1129 <span>↗</span></a></section>
     </main>
 
-    <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Donghwi</p>
-    </footer>
+    <footer class="site-footer"><p><strong>DH</strong> · AI Developer Portfolio</p><p>© <span id="year"></span> DH. Built with curiosity.</p></footer>
     <script src="script.js"></script>
   </body>
 </html>
